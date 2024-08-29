@@ -9,8 +9,8 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/image2.png" rel="icon">
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -50,7 +50,7 @@
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
+  <header id="header" class="header d-flex align-items-center fixed-top bg-header">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="#hero" class="logo d-flex align-items-center">
@@ -98,16 +98,16 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+    <section id="hero" class="hero section dark-background bg-image">
 
       <div id="hero-carousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
 
         <!-- Slide 1 -->
         <div class="carousel-item active">
           <div class="carousel-container">
-            <h2 class="animate__animated animate__fadeInDown">Addicted to Cleaning</h2>
-            <p class="animate__animated animate__fadeInUp">Leave the dirty work to us and enjoy a spotless, refreshed space every day. Our expert team is dedicated to creating a pristine, inviting environment that reflects the highest standards of cleanliness.</p>
-            <a href="#getaquote" class="btn-get-started animate__animated animate__fadeInUp scrollto">Request a Quote Now</a>
+            <div class="top-hero">
+              <h1 class="animate__animated animate__fadeInDown">Scrubaholics</h1>
+            </div>
           </div>
         </div>
 
@@ -171,7 +171,7 @@
 
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
             <p>
-              At Scrubaholics, we’ve been specializing in top-tier commercial and residential cleaning services for over four years. With a dedicated team of experienced professionals, 
+              At Scrubaholics, we’ve been specializing in top-tier commercial cleaning services for over four years. With a dedicated team of experienced professionals, 
               we’re committed to delivering exceptional results that transform spaces and exceed expectations.
             </p>
             <ul>
@@ -713,7 +713,7 @@
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
                 <h3>Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>151 N Nob Hill Rd, Plantation Fl, 33324</p>
               </div>
             </div><!-- End Info Item -->
 
@@ -721,7 +721,7 @@
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
                 <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+                <p>+1 954 279 6282</p>
               </div>
             </div><!-- End Info Item -->
 
@@ -729,7 +729,7 @@
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h3>Email Us</h3>
-                <p>info@example.com</p>
+                <p>iinfo@scrubaholics.com</p>
               </div>
             </div><!-- End Info Item -->
 
@@ -793,7 +793,7 @@
           <!-- You can delete the links only if you've purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://codewithshahzaib.com/">Shahzaib M.</a>
+          <!-- Designed by <a href="https://codewithshahzaib.com/">Shahzaib M.</a> -->
         </div>
       </div>
     </div>
@@ -847,6 +847,43 @@
                 console.error('EmailJS Error:', error);
             });
     });
+
+    document.addEventListener('DOMContentLoaded', function () {
+    // Get references to the hero section and the carousel
+    const heroSection = document.getElementById('hero');
+    const heroCarousel = document.getElementById('hero-carousel');
+    const header = document.getElementById('header');
+
+    // Add an event listener to handle slide change
+    heroCarousel.addEventListener('slid.bs.carousel', function (event) {
+      // Check which slide is active
+      const activeIndex = event.to;
+
+      if (activeIndex === 0) {
+        // If it's the first slide, add the 'bg-image' class
+        heroSection.classList.add('bg-image');
+        header.classList.add('bg-header');
+      } else {
+        // Otherwise, remove the 'bg-image' class
+        heroSection.classList.remove('bg-image');
+        header.classList.remove('bg-header');
+      }
+    });
+  });
+
+  window.addEventListener("scroll", function () {
+    var header = document.querySelector(".header");
+    var scrollPos = window.scrollY;
+
+    if (scrollPos > 50) { // Adjust the scroll position value as needed
+      header.classList.add("scrolled");
+      header.classList.remove('bg-header');
+    } else {
+      header.classList.remove("scrolled");
+      header.classList.add('bg-header');
+    }
+  });
+
   </script>
 
 </body>
