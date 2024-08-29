@@ -698,7 +698,7 @@ section,
 }
 
 .bg-image {
-  background-image: url("assets/img/main-img.jpg");
+  background-image: url("/img/main-img.jpg");
 }
 
 .hero .carousel-container {
