@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Selecao Bootstrap Template</title>
+  <title>Scrubaholics</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -781,7 +781,7 @@
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
         <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href="https://www.instagram.com/scrubaholicsclean?igsh=NjQ0bDRja2Q4NTR4"><i class="bi bi-instagram"></i></a>
         <a href=""><i class="bi bi-skype"></i></a>
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
@@ -824,7 +824,7 @@
   <script>
     // Initialize EmailJS
     (function() {
-        emailjs.init("_PF21E3Z0NaZO3tDg"); // Replace with your EmailJS User ID
+        emailjs.init("caJdzuOlVrBMCeTyn"); // Replace with your EmailJS User ID
     })();
 
     // Function to handle form submission
@@ -840,9 +840,10 @@
         };
 
         // Send the email
-        emailjs.send('service_7ye8spi', 'template_5mwa42t', formData) // Replace with your Service ID and Template ID
+        emailjs.send('service_cjpj4mp', 'template_jlj4gdw', formData) // Replace with your Service ID and Template ID
             .then(function(response) {
                 alert('Your message has been sent. Thank you!');
+                window.location.reload();
             }, function(error) {
                 alert('Failed to send the message. Please try again later.');
                 console.error('EmailJS Error:', error);
